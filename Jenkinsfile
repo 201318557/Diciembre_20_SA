@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('Compile Stage') {
           steps{
-            sh 'make'
+            echo 'make'
           }
           
         }
@@ -12,14 +12,14 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-                sh 'make check'
+                echo 'make check'
             }
         }
 
 
         stage ('Deployment Stage') {
             steps {
-                sh 'make publish'
+                echo 'make publish'
             }
         }
     }
